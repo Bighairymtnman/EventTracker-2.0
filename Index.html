@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Event Tracker</h1>
+        <a href="event-details.html" class="details-link">View All Events</a>
+        <a href="calendar.html" class="nav-link">Calendar View</a>
+
+        <form id="eventForm">
+            <div class="form-group">
+                <label for="eventTitle">Event Title</label>
+                <input type="text" id="eventTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="eventDate">Event Date</label>
+                <input type="date" id="eventDate" required>
+            </div>
+            <div class="form-group">
+                <label for="eventDescription">Event Description</label>
+                <textarea id="eventDescription" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="eventOrganizer">Select Organizer</label>
+                <select id="eventOrganizer" required>
+                    <!-- Options will be loaded dynamically -->
+                </select>
+            </div>
+            <button type="submit">Add Event</button>
+        </form>
+
+        <h2>Upcoming Events</h2>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search events...">
+        </div>
+        
+        <ul id="eventList"></ul>
+    </div>
+    <script>console.log('HTML loaded');</script>
+    <script src="scripts.js"></script>
+
+    <div id="eventModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Add Event</h3>
+            <input type="text" id="eventTitle" placeholder="Event Title">
+            <input type="time" id="eventTime">
+            <button id="saveEvent">Save</button>
+            <button id="closeModal">Cancel</button>
+        </div>
+    </div>
+    
+</body>
+</html>
+
